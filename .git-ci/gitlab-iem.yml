@@ -97,6 +97,11 @@ osx:
       - deken
     expire_in: 1 week
 
+sast:
+  stage: test
+include:
+- template: Security/SAST.gitlab-ci.yml
+
 osx-test:
   extends:
     - .deken-test
